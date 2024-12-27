@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: 49-Actuators
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    shutdown: 
+      enabled: true       #for shutdown but it is in POSTmapping
+
+
+#			
+#			 -> Actuator is one of the powerful feature introduced in Spring Boot 
+#			 -> Actuators are used to monitor and manage our application 
+#			 -> Actuators are giving Production ready features for our boot application
+#			 
+#			
+#			
+#			/health : To get application health status 
+#			 
+#			/info : To get application information 
+#			 
+#			/beans : To get what beans loaded by our application 
+#			 
+#			/mappings: To get what URL patterns available in our application 
+#			 
+#			/configProps : To get configuration properties loaded by our application 
+#			 
+#			/heapdump : To download heap data 
+#			 
+#			/threaddump : To get threads information 
+#			 
+#			/shutdown : To stop our application (This is special, it is binded to 
+#			POST request)
